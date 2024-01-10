@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Tokenizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VP-Lh-rea">
+                                <rect key="frame" x="16" y="75" width="361" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="t5y-in-H53">
+                                <rect key="frame" x="16" y="389.66666666666669" width="361" height="98"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-uN-F7v">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY4-e0-A8S">
+                                        <rect key="frame" x="0.0" y="98" width="361" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6VP-Lh-rea" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0qS-FN-x0d"/>
+                            <constraint firstItem="t5y-in-H53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="1BC-Ag-OqA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6VP-Lh-rea" secondAttribute="trailing" constant="16" id="MR3-Ud-Ezj"/>
+                            <constraint firstItem="t5y-in-H53" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fqN-P1-BjO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t5y-in-H53" secondAttribute="trailing" constant="16" id="qjs-R6-Yqz"/>
+                            <constraint firstItem="6VP-Lh-rea" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="vbZ-77-NSL"/>
+                            <constraint firstItem="t5y-in-H53" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="zw9-cj-iKV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="PCe-uN-F7v" id="L7d-ye-Yy6"/>
+                        <outlet property="languagePicker" destination="6VP-Lh-rea" id="ZNT-7U-HZa"/>
+                        <outlet property="outputLabel" destination="qY4-e0-A8S" id="Y3D-oh-DmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+</document>
