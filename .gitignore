@@ -1,0 +1,5 @@
+*.xcbkptlist
+*.xcuserstate
+*/*xcworkspace/xcuserdata/
+*/**/xcuserdata/
+*.DS_Store
