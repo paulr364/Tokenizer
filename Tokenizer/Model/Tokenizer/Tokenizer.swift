@@ -52,7 +52,7 @@ final class Tokenizer {
         var keywordRange: Range<String.Index>?
         tokenizer.enumerateTokens(in: range) { tokenRange, _ in
             let token = String(string[tokenRange])
-            if keywords.contains(token) {
+            if keywords.contains(where: { $0.caseInsensitiveCompare(token) == .orderedSame }) {
                 keywordRange = tokenRange
                 semaphore.signal()
                 return false
