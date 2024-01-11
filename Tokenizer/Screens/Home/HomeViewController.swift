@@ -14,7 +14,7 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet private var languagePicker: UIPickerView!
     @IBOutlet private var inputField: UITextField!
-    @IBOutlet private var outputLabel: UILabel!
+    @IBOutlet private var outputTextView: UITextView!
     
     // MARK: - Properties
     
@@ -32,6 +32,9 @@ final class HomeViewController: UIViewController {
     private func setupUI() {
         languagePicker.dataSource = self
         languagePicker.delegate = self
+        
+        outputTextView.isEditable = false
+        outputTextView.isScrollEnabled = true
     }
     
     private func setupBindings() {
@@ -47,7 +50,7 @@ final class HomeViewController: UIViewController {
         viewModel.$output
             .receive(on: DispatchQueue.main)
             .compactMap { $0 }
-            .assign(to: \.text, on: outputLabel)
+            .assign(to: \.text, on: outputTextView)
             .store(in: &subscriptions)
         
         viewModel.clearInputPublisher
