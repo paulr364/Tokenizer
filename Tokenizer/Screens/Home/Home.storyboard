@@ -17,10 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VP-Lh-rea">
-                                <rect key="frame" x="16" y="75" width="361" height="216"/>
+                                <rect key="frame" x="16" y="75" width="361" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="5e1-tV-JXU"/>
+                                </constraints>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-uN-F7v">
-                                <rect key="frame" x="16" y="321" width="361" height="44"/>
+                                <rect key="frame" x="16" y="255" width="361" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="T8e-1K-rZc"/>
                                 </constraints>
@@ -28,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H70-Hd-hCM">
-                                <rect key="frame" x="16" y="395" width="361" height="407"/>
+                                <rect key="frame" x="16" y="329" width="361" height="473"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
