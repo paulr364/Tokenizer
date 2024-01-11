@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6831482B4FFBB30004EDB4 /* NLTokenizer+KeywordRangeSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6831472B4FFBB30004EDB4 /* NLTokenizer+KeywordRangeSearching.swift */; };
+		ED68314B2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68314A2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift */; };
 		ED7FFDA02B4EF6FE004CB4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFD9F2B4EF6FE004CB4F2 /* AppDelegate.swift */; };
 		ED7FFDA22B4EF6FE004CB4F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDA12B4EF6FE004CB4F2 /* SceneDelegate.swift */; };
 		ED7FFDA42B4EF6FE004CB4F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDA32B4EF6FE004CB4F2 /* HomeViewController.swift */; };
@@ -17,6 +19,10 @@
 		ED7FFDD22B4F1948004CB4F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDD12B4F1948004CB4F2 /* HomeViewModel.swift */; };
 		ED7FFDD42B4F19D1004CB4F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7FFDD32B4F19D1004CB4F2 /* Home.storyboard */; };
 		ED7FFDD72B4F1FE7004CB4F2 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDD62B4F1FE7004CB4F2 /* Language.swift */; };
+		ED7FFDD92B4F260A004CB4F2 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDD82B4F260A004CB4F2 /* Tokenizer.swift */; };
+		ED7FFDDB2B4F26D9004CB4F2 /* NLLanguage+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDDA2B4F26D9004CB4F2 /* NLLanguage+Language.swift */; };
+		ED7FFDDF2B4F282B004CB4F2 /* Tokenizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDDE2B4F282B004CB4F2 /* Tokenizable.swift */; };
+		ED7FFDE12B4F283C004CB4F2 /* Tokenizer+Tokenizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDE02B4F283C004CB4F2 /* Tokenizer+Tokenizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED6831472B4FFBB30004EDB4 /* NLTokenizer+KeywordRangeSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NLTokenizer+KeywordRangeSearching.swift"; sourceTree = "<group>"; };
+		ED68314A2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Helpers.swift"; sourceTree = "<group>"; };
 		ED7FFD9C2B4EF6FE004CB4F2 /* Tokenizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokenizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7FFD9F2B4EF6FE004CB4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7FFDA12B4EF6FE004CB4F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,10 @@
 		ED7FFDD12B4F1948004CB4F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ED7FFDD32B4F19D1004CB4F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ED7FFDD62B4F1FE7004CB4F2 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		ED7FFDD82B4F260A004CB4F2 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		ED7FFDDA2B4F26D9004CB4F2 /* NLLanguage+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NLLanguage+Language.swift"; sourceTree = "<group>"; };
+		ED7FFDDE2B4F282B004CB4F2 /* Tokenizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizable.swift; sourceTree = "<group>"; };
+		ED7FFDE02B4F283C004CB4F2 /* Tokenizer+Tokenizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tokenizer+Tokenizable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED6831462B4FFAEF0004EDB4 /* Tokenizer */ = {
+			isa = PBXGroup;
+			children = (
+				ED7FFDD62B4F1FE7004CB4F2 /* Language.swift */,
+				ED7FFDD82B4F260A004CB4F2 /* Tokenizer.swift */,
+				ED6831472B4FFBB30004EDB4 /* NLTokenizer+KeywordRangeSearching.swift */,
+				ED7FFDDA2B4F26D9004CB4F2 /* NLLanguage+Language.swift */,
+			);
+			path = Tokenizer;
+			sourceTree = "<group>";
+		};
+		ED6831492B4FFDE80004EDB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED68314A2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ED7FFD932B4EF6FD004CB4F2 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +148,8 @@
 			children = (
 				ED7FFDA32B4EF6FE004CB4F2 /* HomeViewController.swift */,
 				ED7FFDD12B4F1948004CB4F2 /* HomeViewModel.swift */,
+				ED7FFDDE2B4F282B004CB4F2 /* Tokenizable.swift */,
+				ED7FFDE02B4F283C004CB4F2 /* Tokenizer+Tokenizable.swift */,
 				ED7FFDD32B4F19D1004CB4F2 /* Home.storyboard */,
 			);
 			path = Home;
@@ -125,7 +158,8 @@
 		ED7FFDD52B4F1FDA004CB4F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED7FFDD62B4F1FE7004CB4F2 /* Language.swift */,
+				ED6831492B4FFDE80004EDB4 /* Helpers */,
+				ED6831462B4FFAEF0004EDB4 /* Tokenizer */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,10 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7FFDDB2B4F26D9004CB4F2 /* NLLanguage+Language.swift in Sources */,
+				ED7FFDD92B4F260A004CB4F2 /* Tokenizer.swift in Sources */,
 				ED7FFDA42B4EF6FE004CB4F2 /* HomeViewController.swift in Sources */,
+				ED7FFDDF2B4F282B004CB4F2 /* Tokenizable.swift in Sources */,
 				ED7FFDD72B4F1FE7004CB4F2 /* Language.swift in Sources */,
+				ED6831482B4FFBB30004EDB4 /* NLTokenizer+KeywordRangeSearching.swift in Sources */,
 				ED7FFDA02B4EF6FE004CB4F2 /* AppDelegate.swift in Sources */,
 				ED7FFDA22B4EF6FE004CB4F2 /* SceneDelegate.swift in Sources */,
+				ED7FFDE12B4F283C004CB4F2 /* Tokenizer+Tokenizable.swift in Sources */,
+				ED68314B2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift in Sources */,
 				ED7FFDD22B4F1948004CB4F2 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

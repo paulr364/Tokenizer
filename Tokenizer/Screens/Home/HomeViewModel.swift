@@ -5,6 +5,7 @@
 //  Created by Somebody on 10/01/2024.
 //
 
+import Foundation
 import Combine
 
 final class HomeViewModel: ObservableObject {
@@ -24,12 +25,14 @@ final class HomeViewModel: ObservableObject {
     
     // MARK: - Properties
     
+    private let tokenizer: Tokenizable
     private let clearInputSubject = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Init
     
-    init() {
+    init(tokenizer: Tokenizable) {
+        self.tokenizer = tokenizer
         setupBindings()
     }
     
@@ -38,7 +41,14 @@ final class HomeViewModel: ObservableObject {
             .dropFirst()
             .sink { [weak self] input in
                 guard let self else { return }
-                output = input
+                let language = languages[selectedLanguageIndex]
+                
+                DispatchQueue.global(qos: .userInteractive).async {
+                    let sentences = self.tokenizer.tokenize(string: input, language: language)
+                    self.output = sentences
+                        .map { "- \($0)" }
+                        .joined(separator: "\n")
+                }
             }
             .store(in: &subscriptions)
         

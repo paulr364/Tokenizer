@@ -19,4 +19,13 @@ enum Language: CaseIterable {
             return "Spanish"
         }
     }
+    
+    var tokenizationKeywords: Set<String> {
+        switch self {
+        case .english:
+            return ["and", "if"]
+        case .spanish:
+            return ["Si", "Y"]
+        }
+    }
 }
