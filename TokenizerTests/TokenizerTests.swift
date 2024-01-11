@@ -18,6 +18,14 @@ final class TokenizerTests: XCTestCase {
     
     // MARK: - English
     
+    func testTokenize_Empty_InEnglish() {
+        let sentences = sut.tokenize(string: "", language: .english)
+        
+        XCTAssertEqual(sentences, [
+            ""
+        ])
+    }
+    
     func testTokenize_NoKeywords_InEnglish() {
         let givenString = "I am here to start the project"
         let sentences = sut.tokenize(string: givenString, language: .english)

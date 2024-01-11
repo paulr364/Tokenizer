@@ -47,7 +47,7 @@ final class Tokenizer {
     }
     
     private func keywordRange(in range: Range<String.Index>, keywords: Set<String>) -> Range<String.Index>? {
-        guard let string = tokenizer.string else { return nil }
+        guard let string = tokenizer.string, !string.isEmpty else { return nil }
         let semaphore = DispatchSemaphore(value: 0)
         var keywordRange: Range<String.Index>?
         tokenizer.enumerateTokens(in: range) { tokenRange, _ in
