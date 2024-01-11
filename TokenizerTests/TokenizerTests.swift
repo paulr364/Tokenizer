@@ -40,7 +40,7 @@ final class TokenizerTests: XCTestCase {
         let sentences = sut.tokenize(string: givenString, language: .english)
         
         XCTAssertEqual(sentences, [
-            "What are we doing here"
+            "What are we doing here?"
         ])
     }
     
@@ -49,7 +49,7 @@ final class TokenizerTests: XCTestCase {
         let sentences = sut.tokenize(string: givenString, language: .english)
         
         XCTAssertEqual(sentences, [
-            "What are we doing here"
+            "What are we doing here  "
         ])
     }
     
@@ -85,8 +85,8 @@ final class TokenizerTests: XCTestCase {
         let sentences = sut.tokenize(string: givenString, language: .spanish)
         
         XCTAssertEqual(sentences, [
-            "Tiene este precioso Caddy, ",
-            "Y no te quiere pagar lo que te debe"
+            "¿Tiene este precioso Caddy, ",
+            "Y no te quiere pagar lo que te debe?"
         ])
     }
     
@@ -99,7 +99,7 @@ final class TokenizerTests: XCTestCase {
         XCTAssertEqual(sentences, [
             "Por supuesto, aquí tienes una oración más larga en español: \"Mientras caminaba por el pintoresco sendero, el sol radiante del mediodía brillaba en lo alto, pintando el cielo de un azul profundo ",
             "Y resaltando los colores vibrantes de las flores que bordeaban el camino, creando un escenario que inspiraba asombro ",
-            "Y alegría en cada paso"
+            "Y alegría en cada paso."
         ])
     }
 }

@@ -77,7 +77,7 @@ final class HomeViewModelTests: XCTestCase {
         sut.clearInputPublisher
             .sink(receiveValue: expectation.fulfill)
             .store(in: &subscriptions)
-        ty
+        
         sut.selectedLanguageIndex = 1
         wait(for: [expectation], timeout: 1)
     }

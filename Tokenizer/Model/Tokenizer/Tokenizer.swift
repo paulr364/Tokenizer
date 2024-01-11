@@ -13,12 +13,10 @@ final class Tokenizer {
     // MARK: - Properties
     
     private lazy var tokenizer = NLTokenizer(unit: .word)
-
     
     // MARK: - Methods
     
     func tokenize(string: String, language: Language) -> [String] {
-        var string = string.trimmingCharacters(in: .whitespaces).trimmingCharacters(in: .punctuationCharacters)
         tokenizer.setLanguage(NLLanguage(language: language))
         tokenizer.string = string
         let keywordRanges = keywordRanges(in: string, keywords: language.tokenizationKeywords)
@@ -48,43 +46,36 @@ final class Tokenizer {
     
     private func keywordRange(in range: Range<String.Index>, keywords: Set<String>) -> Range<String.Index>? {
         guard let string = tokenizer.string, !string.isEmpty else { return nil }
-        let semaphore = DispatchSemaphore(value: 0)
         var keywordRange: Range<String.Index>?
         tokenizer.enumerateTokens(in: range) { tokenRange, _ in
             let token = String(string[tokenRange])
             if keywords.contains(where: { $0.caseInsensitiveCompare(token) == .orderedSame }) {
                 keywordRange = tokenRange
-                semaphore.signal()
-                return false
-            } else if tokenRange.upperBound == range.upperBound {
-                semaphore.signal()
                 return false
             } else {
                 return true
             }
         }
-        semaphore.wait()
         return keywordRange
     }
     
     private func mapToSentences(string: String, keywordRanges: [Range<String.Index>]) -> [String] {
+        var sentences: [String] = []
         if keywordRanges.isEmpty {
-            print([string])
-            return [string.firstCapitalized]
+            sentences = [string]
         } else {
             var lowerBound = string.startIndex
-            var sentences = keywordRanges
+            sentences = keywordRanges
                 .map { range in
-                    let sentence = String(string[lowerBound..<range.lowerBound]).firstCapitalized
+                    let sentence = String(string[lowerBound..<range.lowerBound])
                     lowerBound = range.lowerBound
                     return sentence
                 }
             if let lastRange = keywordRanges.last {
-                let sentence = String(string[lastRange.lowerBound..<string.endIndex]).firstCapitalized
+                let sentence = String(string[lastRange.lowerBound..<string.endIndex])
                 sentences.append(sentence)
             }
-            print(sentences)
-            return sentences
         }
+        return sentences.map { $0.firstCapitalized }
     }
 }
