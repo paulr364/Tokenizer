@@ -45,9 +45,11 @@ final class HomeViewModel: ObservableObject {
                 
                 DispatchQueue.global(qos: .userInteractive).async {
                     let sentences = self.tokenizer.tokenize(string: input, language: language)
-                    self.output = sentences
-                        .map { "- \($0)" }
-                        .joined(separator: "\n")
+                    DispatchQueue.main.async {
+                        self.output = sentences
+                            .map { $0.isEmpty ? $0 : "- \($0)" }
+                            .joined(separator: "\n")
+                    }
                 }
             }
             .store(in: &subscriptions)

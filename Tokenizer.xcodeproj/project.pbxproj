@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ED68314B2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68314A2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift */; };
+		ED6831512B501BB60004EDB4 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6831502B501BB60004EDB4 /* HomeViewModelTests.swift */; };
+		ED6831542B501BE90004EDB4 /* TokenizerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6831532B501BE90004EDB4 /* TokenizerMock.swift */; };
+		ED6831562B50219B0004EDB4 /* LanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6831552B50219B0004EDB4 /* LanguageTests.swift */; };
 		ED7FFDA02B4EF6FE004CB4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFD9F2B4EF6FE004CB4F2 /* AppDelegate.swift */; };
 		ED7FFDA22B4EF6FE004CB4F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDA12B4EF6FE004CB4F2 /* SceneDelegate.swift */; };
 		ED7FFDA42B4EF6FE004CB4F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FFDA32B4EF6FE004CB4F2 /* HomeViewController.swift */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		ED68314A2B4FFDF70004EDB4 /* StringProtocol+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Helpers.swift"; sourceTree = "<group>"; };
+		ED6831502B501BB60004EDB4 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		ED6831532B501BE90004EDB4 /* TokenizerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenizerMock.swift; sourceTree = "<group>"; };
+		ED6831552B50219B0004EDB4 /* LanguageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTests.swift; sourceTree = "<group>"; };
 		ED7FFD9C2B4EF6FE004CB4F2 /* Tokenizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokenizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7FFD9F2B4EF6FE004CB4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7FFDA12B4EF6FE004CB4F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,11 +97,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		ED68314C2B500EBC0004EDB4 /* Mocks */ = {
+		ED68314F2B501BAB0004EDB4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				ED6831502B501BB60004EDB4 /* HomeViewModelTests.swift */,
+				ED6831532B501BE90004EDB4 /* TokenizerMock.swift */,
 			);
-			path = Mocks;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		ED7FFD932B4EF6FD004CB4F2 = {
@@ -134,8 +142,9 @@
 		ED7FFDB52B4EF6FF004CB4F2 /* TokenizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED68314C2B500EBC0004EDB4 /* Mocks */,
+				ED68314F2B501BAB0004EDB4 /* Screens */,
 				ED7FFDB62B4EF6FF004CB4F2 /* TokenizerTests.swift */,
+				ED6831552B50219B0004EDB4 /* LanguageTests.swift */,
 			);
 			path = TokenizerTests;
 			sourceTree = "<group>";
@@ -289,6 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7FFDB72B4EF6FF004CB4F2 /* TokenizerTests.swift in Sources */,
+				ED6831562B50219B0004EDB4 /* LanguageTests.swift in Sources */,
+				ED6831512B501BB60004EDB4 /* HomeViewModelTests.swift in Sources */,
+				ED6831542B501BE90004EDB4 /* TokenizerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
