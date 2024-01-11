@@ -25,7 +25,7 @@ enum Language: CaseIterable {
         case .english:
             return ["and", "if"]
         case .spanish:
-            return ["Si", "Y"]
+            return ["si", "y"]
         }
     }
 }

@@ -19,8 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let viewController = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
-        let tokenizer = Tokenizer(keywordRangeSearcher: KeywordRangeSearcher())
-        viewController.viewModel = HomeViewModel(tokenizer: tokenizer)
+        viewController.viewModel = HomeViewModel(tokenizer: Tokenizer())
         let navigationVC = UINavigationController(rootViewController: viewController)
         
         let window = UIWindow(windowScene: windowScene)
