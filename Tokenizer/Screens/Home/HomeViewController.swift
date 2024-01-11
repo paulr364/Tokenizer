@@ -40,6 +40,7 @@ final class HomeViewController: UIViewController {
             .map { ($0.object as? UITextField)?.text ?? "" }
                 
         textFieldPublisher
+            .debounce(for: 0.1, scheduler: DispatchQueue.main)
             .assign(to: \.input, on: viewModel)
             .store(in: &subscriptions)
         
